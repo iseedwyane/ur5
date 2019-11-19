@@ -1,0 +1,25 @@
+
+
+<launch>
+
+        
+        <include file="$(find ur5_moveit_config)/launch/ur5_moveit_planning_execution.launch">
+	</include>
+
+
+        <!--Startup moveit_rviz.launch with arg: config:=true -->
+        <include file="$(find ur5_moveit_config)/launch/moveit_rviz.launch">
+        <arg name="config" value="true"/>
+        </include>
+
+        <include file="$(find aruco_ros)/launch/single_realsense.launch">
+	</include>
+
+
+        <include file="$(find learning_tf)/launch/tf_demo.launch">
+	</include>
+
+
+</launch>
+
+
